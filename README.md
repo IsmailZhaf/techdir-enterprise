@@ -1,69 +1,107 @@
-# React + TypeScript + Vite
+# TechDir Enterprise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Internal HR Management Console untuk mengelola data karyawan perusahaan.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React** + **TypeScript** + **Vite**
+- **Tailwind CSS** + **shadcn/ui**
+- **TanStack Query** — data fetching & caching
+- **Jotai** — global state management
+- **React Router DOM** — routing
+- **Axios** — HTTP client
+- **React Hook Form** — form state management
+- **Zod** — schema validation
+- **jwt-decode** — decode dan validasi JWT token
+- **Tailwind CSS** — utility-first CSS framework
+- **shadcn/ui** — reusable component library
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 1. Clone repository
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/IsmailZhaf/techdir-enterprise.git
+cd techdir-enterprise
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. Buat file environment
+
+Buat file `.env` di root project:
+
+```env
+VITE_API_BASE_URL=https://dummyjson.com
+```
+
+---
+
+## Cara Run
+
+### Development
+
+```bash
+npm run dev
+```
+
+Aplikasi akan berjalan di `http://localhost:5173`
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview build
+
+```bash
+npm run preview
+```
+
+---
+
+## Testing
+
+```bash
+# Jalankan semua test
+npm test
+
+# Jalankan dengan UI
+npm run test:ui
+```
+
+---
+
+## Folder Structure
+
+```
+<ul>
+    <li>atoms : Folder untuk menyimpan atom yang digunakan untuk global state management </li>
+    <li>components : Folder untuk menyimpan components</li>
+    <li>hooks : Folder yang berisi custom hooks yang berisi logic dari aplikasi </li>
+    <li>libs : Folder yang berisi fungsi-fungsi pembantu atau helper </li>
+    <li>pages: Folder yang berisi halaman-halaman utama dari aplikasi </li>
+    <li>services : Folder yang berfungsi untuk berkomunikasi dengan API </li>
+    <li>test : Folder tempat menyimpan setup untuk testing </li>
+    <li>types : Folder tempat menyimpan TypeScript type dan interface yang dipakai di seluruh aplikasi </li>
+</ul>
+
+```
+
+---
+
+## Default Login
+
+```
+Username : emilys
+Password : emilyspass
 ```
