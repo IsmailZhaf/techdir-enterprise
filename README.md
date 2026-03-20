@@ -83,7 +83,7 @@ npm run test:ui
 
 ## Folder Structure
 
-```
+
 <ul>
     <li>atoms : Folder untuk menyimpan atom yang digunakan untuk global state management </li>
     <li>components : Folder untuk menyimpan components</li>
@@ -95,7 +95,6 @@ npm run test:ui
     <li>types : Folder tempat menyimpan TypeScript type dan interface yang dipakai di seluruh aplikasi </li>
 </ul>
 
-```
 
 ---
 
